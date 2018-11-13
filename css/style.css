@@ -1,0 +1,303 @@
+/* STYLE*/
+/* ------------------------------------------------- */
+.boxes,
+.contact,
+.info,
+.info-contact,
+.top-container,
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.wrapper,
+nav {
+    width: auto;
+}
+
+.boxes,
+.info-contact {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.box,
+.showcase h1,
+.top-box h3,
+form h3 {
+    font-weight: 700;
+}
+
+.box,
+.plant-icons,
+.top-box h3,
+footer {
+    text-align: center;
+}
+
+:root {
+    --font-dark: black;
+    --font-light: white;
+    --icons: #242424;
+    --foreground: #f5bf00;
+    --background: white;
+    --border: solid 7px white
+}
+
+html {
+    box-sizing: border-box;
+    font-family: Helvetica;
+    color: var(font-dark);
+}
+
+body {
+    background: var(--background);
+    margin: 30px 100px;
+    line-height: 1.4;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+}
+
+img {
+    max-width: 90%;
+}
+
+.box,
+.contact,
+.info,
+.nf-mono,
+.showcase,
+.top-box {
+    border-radius: .5rem;
+}
+
+/*NAV BAR*/
+nav {
+    height: auto;
+    background: var(--icons);
+    border-radius: .4rem;
+    padding: .2rem .4rem .3rem 0;
+}
+
+.icons {
+    padding: .5rem;
+    float: right;
+    width: 4rem;
+}
+
+nav p {
+    font-size: .1rem;
+}
+
+/*TOP CONTAINER*/
+.top-container {
+    grid-template-areas: 'showcase showcase top-box-a''showcase showcase top-box-b';
+}
+
+/*SHOWCASE*/
+.showcase {
+    grid-area: showcase;
+    min-height: 400px;
+    background: url(/img/volvo-adt-black-white.jpg);
+    background-size: cover;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center box-shadow: var(--shadow);
+}
+
+.showcase h1,
+.showcase h2 {
+    color: var(--font-dark);
+    padding: 1rem;
+    opacity: .8;
+    border-radius: .5rem;
+}
+
+.showcase h1 {
+    font-size: 2.6rem;
+    margin-bottom: 0;
+    background: var(--foreground);
+}
+
+.showcase h2 {
+    font-size: 1.4rem;
+    background: #fff;
+    margin: 1rem 0;
+}
+
+.box,
+.contact,
+.info,
+.plant-icons,
+.top-box {
+    background: var(--foreground);
+}
+
+/*BOXES*/
+.top-box {
+    grid-area: top-box-a;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.top-box h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.boxes h4,
+.contact h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.top-box-b {
+    grid-area: top-box-b;
+}
+
+.box {
+    padding: 1.5rem 2rem;
+}
+
+/*CONTACT AND INFO*/
+.contact,
+.info {
+    padding: 2rem;
+}
+
+.info {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.info-text-box {
+    background: var(--background);
+    background: #242424;
+    color: var(--background);
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    /*   background: #ccc;*/
+}
+
+/*
+q {
+   quotes: "\201C""\201D""\2018""\2019";
+   line-height: 1.4;
+}
+q:before {
+   content: open-quote;
+   display: inline;
+   height: 0;
+   line-height: 0;
+   left: -5px;
+   position: relative;
+   top: 10px;
+   color: #ccc;
+   font-size: 2.5rem;
+}
+q:after {
+   content: close-quote;
+   display: inline;
+   height: 0;
+   line-height: 0;
+   left: 5px;
+   position: relative;
+   top: 10px;
+   color: #ccc;
+   font-size: 2.5rem;
+}
+*/
+.contact {
+    align-content: flex-start;
+}
+
+form {
+    padding: 0 10px;
+}
+
+input,
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: .5rem;
+    border: 1px solid #cbcbcb;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #ccc;
+    color: #000;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+    color: #fff;
+}
+
+::placeholder {
+    font-size: .9rem;
+}
+
+/*FOOTER*/
+footer {
+    background: var(--icons);
+    border-radius: .4rem;
+    color: var(--font-light);
+    padding: 1.4rem;
+}
+
+footer p {
+    font-size: .8rem;
+}
+
+a {
+    color: var(--foreground);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--background);
+}
+
+/*MEDIA QUERYS*/
+@media(max-width:700px) {
+    .top-container {
+        grid-template-areas: 'showcase showcase''top-box-a top-box-b';
+    }
+
+    .showcase h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact,
+    .info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:500px) {
+    .top-container {
+        grid-template-areas: 'showcase''top-box-a''top-box-b';
+    }
+}
+
+@media(max-width:460px) {
+    body {
+        margin: 20px;
+    }
+}

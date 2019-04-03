@@ -87,10 +87,6 @@ nav {
     width: 4rem;
 }
 
-nav p {
-    font-size: .1rem;
-}
-
 /*TOP CONTAINER*/
 .top-container {
     grid-template-areas: 'showcase showcase top-box-a''showcase showcase top-box-b';
@@ -106,7 +102,7 @@ nav p {
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: center box-shadow: var(--shadow);
+    justify-content: center box-shadow var(--shadow);
 }
 
 .showcase h1,
@@ -223,7 +219,6 @@ form {
 
 input,
 input[type=text],
-select,
 textarea {
     width: 100%;
     padding: .5rem;
@@ -247,10 +242,6 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #45a049;
     color: #fff;
-}
-
-::placeholder {
-    font-size: .9rem;
 }
 
 /*FOOTER*/

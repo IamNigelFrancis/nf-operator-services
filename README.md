@@ -5,4 +5,7 @@ Built from the ground up. No frameworks. Just PURE CSS Grid! CSS grid is a techn
 ![Front Page](/img/nf-operator-services-fullpage.jpg)
 
 
-![Front Page](/img/wireframe.jpg)
+
+<p align="center">
+  <img src="/img/wireframe.jpg">
+</p>
